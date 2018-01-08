@@ -38,7 +38,7 @@ class V1::PageController < ApplicationController
   private
 
   def page_params
-    params.permit(:title, :body)
+    params.permit(:title, :content, :parent_id)
   end
 
 

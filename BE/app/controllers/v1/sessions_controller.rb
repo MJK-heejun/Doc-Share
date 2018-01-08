@@ -1,5 +1,7 @@
 class V1::SessionsController < ApplicationController
   #for signing in
+  acts_as_token_authentication_handler_for User, except: [:create]
+
   def create
     user = User.where(email: params[:email]).first
 
@@ -23,4 +25,6 @@ class V1::SessionsController < ApplicationController
       head(:unauthorized)
     end
   end
+
+
 end

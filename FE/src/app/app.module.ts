@@ -13,7 +13,6 @@ const appRoutes: Routes = [
   //{ path: 'home', component: HomeComponent },
   { path: 'home', component: MenuComponent },
   { path: 'page/:id', component: ContentComponent },
-  { path: 'page/:id/edit', component: EditorComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }, //redirect everything else
 ];
 
